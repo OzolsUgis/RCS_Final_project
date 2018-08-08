@@ -1,0 +1,43 @@
+
+.tabContainer{
+    margin-top:50px;
+    margin-left: 300px;
+    width: 900px;
+    height: 350px;
+}
+.tabContainer .buttonContainer{
+    height: 15%;
+}
+.tabContainer .buttonContainer button{
+    width: 25%;
+    height: 100%;
+    float: left;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: #473c32c0;
+    border: 1px solid #e5ad4a;
+}
+.tabContainer .buttonContainer button:hover{
+    background-color: #473c32ef;
+}
+.tabContainer .tabPanel{
+    height: 85%;
+    background-color: #473c32ef;
+    color: #e5ad4a;
+    text-align: center;
+    padding-top: 105px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 22px;
+    display: none;
+    border: 1px solid #e5ad4a;
+    border-top:none;
+}
+
+.tabPanel .contact_elements{
+    margin-top: -80px;
+}

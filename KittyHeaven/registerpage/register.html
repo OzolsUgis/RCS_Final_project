@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kitty Heaven | Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="img">
+        <div class="background">
+            <header>
+                <div class="container">
+                    <div id="branding">
+                        <a href="../homepage/home.html">
+                            <img id="img1" src="../img/Logo.png">
+                        </a>
+                    </div>
+                    <div>
+
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="../homepage/home.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="../articlespage/articles.html">Articles</a>
+                                </li>
+                                <li>
+                                    <a href="../chatpage/chat.html">Chat</a>
+                                </li>
+                                <li class="current">
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="../aboutpage/about.html">About Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+            </header>
+
+            <div class="page-box">
+                <a href="../homepage/home.html">Home</a>
+                <span class="back"> > </span>
+                <span>
+                    <a href="registerpage.html" id="this-page">Register</a>
+                </span>
+            </div>
+            <div class="register-form"></div>
+            <div class="register">
+                <h1>Register</h1>
+                <form id="registration_form">
+                    <div>
+                        
+                            <label>
+                                    First name
+                                </label>
+                        <input type="text" id="form_fname" name="" required=""> 
+                        <span class="error_form" id="fname_error_message"></span>
+                    </div>
+                    <div>
+
+                            <label>
+                                    Last name
+                                </label>
+                        <input type="text" id="form_lname" name="" required="">   
+                     <span class="error_form" id="lname_error_message"></span>
+                    </div>
+                    <div>
+                            <label>
+                                    Email
+                                </label>
+                        <input type="email" id="form_email" name="" required="">
+                        <span class="error_form" id="email_error_message"></span>
+                    </div>
+                    <div>
+
+                        
+                            <label>
+                                    Password
+                                </label>
+                        <input type="password" id="form_password" name="" required="">
+                        <span class="error_form" id="password_error_message"></span>
+                    </div>
+                    <div>
+
+                            <label>
+                                    Re-Enter Password
+                                </label>
+                        <input type="password" id="form_retype_password" name="" required="">
+                        <span class="error_form" id="retype_password_error_message"></span>
+                    </div>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $("#fname_error_message").hide();
+                    $("#lname_error_message").hide();
+                    $("#email_error_message").hide();
+                    $("#password_error_message").hide();
+                    $("#retype_password_error_message").hide();
+
+                    var error_fname = false;
+                    var error_lname = false;
+                    var error_email = false;
+                    var error_password = false;
+                    var error_retype_password = false;
+
+                    $("#form_fname").focusout(function () {
+                        check_fname();
+                    });
+                    $("#form_lname").focusout(function () {
+                        check_lname();
+                    });
+                    $("#form_email").focusout(function () {
+                        check_email();
+                    });
+                    $("#form_password").focusout(function () {
+                        check_password();
+                    });
+                    $("#form_retype_password").focusout(function () {
+                        check_retype_password();
+                    });
+
+                    function check_fname() {
+                        var pattern = /^[a-zA-Z]*$/;
+                        var fname = $("#form_fname").val();
+                        if (pattern.test(fname) && fname !== '') {
+                            $("#fname_error_message").hide();
+                            $("#form_fname").css("border", "2px solid #34F458");
+                        } else {
+                            $("#fname_error_message").html("Should contain only Characters");
+                            $("#fname_error_message").show();
+                            $("#form_fname").css("border", "2px solid #F90A0A");
+                            error_fname = true;
+                        }
+                    }
+
+                    function check_lname() {
+                        var pattern = /^[a-zA-Z]*$/;
+                        var lname = $("#form_lname").val()
+                        if (pattern.test(lname) && lname !== '') {
+                            $("#lname_error_message").hide();
+                            $("#form_lname").css("border", "2px solid #34F458");
+                        } else {
+                            $("#lname_error_message").html("Should contain only Characters");
+                            $("#lname_error_message").show();
+                            $("#form_lname").css("border", "2px solid #F90A0A");
+                            error_lname = true;
+                        }
+                    }
+
+                    function check_email() {
+                        var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                        var email = $("#form_email").val();
+                        if (pattern.test(email) && email !== '') {
+                            $("#email_error_message").hide();
+                            $("#form_email").css("border", "2px solid #34F458");
+                        } else {
+                            $("#email_error_message").html("Invalid Email");
+                            $("#email_error_message").show();
+                            $("#form_email").css("border", "2px solid #F90A0A");
+                            error_email = true;
+                        }
+                    }
+
+                    function check_password() {
+                        var password_length = $("#form_password").val().length;
+                        if (password_length < 8) {
+                            $("#password_error_message").html("Atleast 8 Characters");
+                            $("#password_error_message").show();
+                            $("#form_password").css("border", "2px solid #F90A0A");
+                            error_password = true;
+                        } else {
+                            $("#password_error_message").hide();
+                            $("#form_password").css("border", "2px solid #34F458");
+                        }
+                    }
+
+                    function check_retype_password() {
+                        var password = $("#form_password").val();
+                        var retype_password = $("#form_retype_password").val();
+                        if (password !== retype_password) {
+                            $("#retype_password_error_message").html("Passwords Did not Matched");
+                            $("#retype_password_error_message").show();
+                            $("#form_retype_password").css("border", "2px solid #F90A0A");
+                            error_retype_password = true;
+                        } else {
+                            $("#retype_password_error_message").hide();
+                            $("#form_retype_password").css("border", "2px solid #34F458");
+                        }
+                    }
+
+                    $("#registration_form").submit(function () {
+                        error_fname = false;
+                        error_lname = false;
+                        error_email = false;
+                        error_password = false;
+                        error_retype_password = false;
+                        check_fname();
+                        check_lname();
+                        check_email();
+                        check_password();
+                        check_retype_password();
+                        if (error_fname === false && error_lname === false && error_email === false && error_password === false && error_retype_password === false) {
+                            alert("Registration Successfull");
+                            return true;
+                        } else {
+                            alert("Please Fill the form Correctly");
+                            return false;
+                        }
+                    });
+                    });
+            </script>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+<footer>
+    <div class="footer">
+        <p> Kitty Heaven, Copyright &copy; 2018</p>
+    </div>
+</footer>
+
+</html>

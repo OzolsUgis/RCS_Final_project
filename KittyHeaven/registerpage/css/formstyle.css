@@ -1,0 +1,55 @@
+.register-form{
+    background-color:#473c3288;
+    margin-top: 50px;
+    height: 700px
+}
+
+.register{
+    
+    margin-top: -700px;
+    margin-left:400px;
+    width: 700px;
+    margin-right: 0px;
+  
+}
+
+.register h1{
+    padding: 20px;
+    color: #e5ad4a;
+    font-weight: 700;
+}
+
+.register label{
+    color: #e5ad4a;
+    font-weight: 700;
+}
+
+.register input{
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-origin: shadow 3px;
+    outline-style: none;
+    border-bottom: 2px solid #e5ad4a;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.register input[type="submit"] {
+    border-radius: 10px;
+    color: #473c32;
+    background: #e5ad4a;
+    cursor:pointer;
+
+}
+
+.register input[type="submit"]:hover{
+    transform: scale(1.1);
+}
+
+.error_form{
+    margin-top: 0px;
+    color:#F90A0A ;
+}

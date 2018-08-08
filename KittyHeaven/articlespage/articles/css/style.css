@@ -1,0 +1,182 @@
+/* global */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1,5;
+    font: 15px/1,5 Arial, Helvetica, sans-serif;
+    padding:0;
+    margin:0;
+    background-color: #e5ad4a;
+}
+
+
+.img{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 0px;
+    height: 1150px;
+    
+
+}
+header{
+    
+    background: #473c327a;   
+    min-height: 100px;
+    border-bottom: #000000 3px solid;
+ 
+}
+
+
+header div {
+    width: 1500px;
+ }
+ 
+
+header .container{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+header div {
+   width: 1400px;
+}
+
+
+
+header #branding{
+    float: left;
+    opacity: 1;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+header #img1{
+    opacity: 1;
+    height: 100px;
+    width: 120px;
+}
+
+header a{
+    color: #e5ad4a;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+header a:hover{
+    font-weight: bold;
+    text-decoration: none;
+    color: #e5ad4a;
+}
+
+header nav{
+    float: right;
+    margin-top: -65px;
+    margin-right: 60px;
+
+ 
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header .current{
+    color: #e5ad4a;
+    font-weight: bold;
+    
+}
+
+ .page-box{
+     margin-top: 50px;
+     margin-left: 70px;
+     padding: 10px;
+ }
+
+ 
+
+ .page-box a{
+     text-decoration: none;
+     color: #e5ad4a;
+     padding: 10px;
+
+ }
+
+ .page-box a:hover{
+     text-decoration: none;
+     color: #e5ad4a;
+     font-weight: 700;
+ }
+ .page-box #this-page{
+     font-weight: 700;
+ }
+
+ .page-box .back{
+     color: #e5ad4a;
+ }
+
+ .background{
+     height: 1150px;
+     width: 100%;
+     background: #473c325d;   
+
+ }
+
+
+
+.page-numbers{
+    color:#473c32;
+    float: right;
+    margin-right:30px;
+    margin-top: 20px;
+}
+
+
+
+.page-numbers .page-number-elements span, .page-numbers .page-number-elements a{
+    font-size: 16px;
+    color:#473c32;
+
+}
+
+
+.page-number-elements:hover{
+    font-weight:700;
+}
+
+
+
+.page-numbers-2{
+    color:#473c32;
+    float: right;
+    margin-top: 800px;
+    margin-right: 30px;
+}
+.page-numbers-2 .page-number-elements span, .page-numbers-2 .page-number-elements a{
+    font-size: 16px;
+    color:#473c32;
+
+}
+
+.page-numbers-2 .page-number-elements:hover{
+    font-weight:700;
+}
+
+
+   
+.footer{
+    text-align: center;
+    color: #e5ad4a;
+    background-color: #473c32;
+    height: 100px;
+    border-top:#000000 3px solid; 
+    
+}
+
+.footer p {
+    margin-top: 35px;
+}
